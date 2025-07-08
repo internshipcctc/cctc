@@ -1,79 +1,229 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เลือกสาขาฝึกงาน</title>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>เลือกสาขาฝึกงาน - วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&family=Mali&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../photo/โลโก้.png" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Prompt', sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #f1f4f8, #dfe9f3);
+      font-family: 'Sarabun', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .animated-header {
+      position: relative;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      gap: 20px;
+      padding: 50px 40px;
+      color: white;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    .animated-header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url("../photo/1เบลอ.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(20px);
+      opacity: 0.85;
+      z-index: -1;
+    }
+
+    .animated-header img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .header-text p {
+      margin-top: 5px;
+      font-size: 1em;
+      font-family: 'Mali', sans-serif;
+    }
+
+    nav {
+      background: linear-gradient(90deg, #004aad, #001c44);
+      display: flex;
       justify-content: center;
-      min-height: 100vh;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 22px;
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 6px 8px;
+      border-radius: 6px;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffd600;
+      color: #001c44;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffd600;
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       text-align: center;
     }
 
-    h1 {
-      font-size: 2em;
-      margin: 20px;
-      color: #333;
-      padding: 0 20px;
+    main h2 {
+      color: #004aad;
+      font-size: 2rem;
+      margin-bottom: 30px;
     }
 
     .button-container {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      width: 100%;
       max-width: 300px;
-      padding: 0 20px;
+      margin: 0 auto;
     }
 
     .btn {
       background: #eb2f9c;
       color: #fff;
-      padding: 15px 20px;
-      border: none;
-      border-radius: 12px;
+      padding: 14px 20px;
       font-size: 1.1em;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
-      transition: background 0.3s ease;
       text-decoration: none;
+      transition: background 0.3s ease;
     }
 
     .btn:hover {
       background: #1815da;
     }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .back-link:hover {
+      background-color: #388e3c;
+    }
+
+    footer {
+      margin-top: 60px;
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .animated-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin: 0 10px 20px;
+      }
+
+      main {
+        margin: 0 15px;
+        padding: 30px 20px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <h1>เลือกสาขาฝึกงานของคุณ</h1>
+  <!-- Header -->
+  <header class="animated-header">
+    <img src="../photo/โลโก้.png" alt="โลโก้โรงเรียน" />
+    <div class="header-text">
+      <h1>วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ</h1>
+      <p>CHAROENMIT COMMERCIAL TECHNOLOGICAL COLLEGE</p>
+    </div>
+  </header>
 
-  <div class="button-container">
-    <a class="btn" href="account.html">บัญชี</a>
-    <a class="btn" href="marketing.html">การตลาด</a>
-    <a class="btn" href="it.html">คอมพิวเตอร์ธุรกิจ</a>
-  </div>
-	
-	 <div style="text-align: center; margin-top: 40px;">
-  <a href="../index.html" style="
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 16px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);">⬅ ย้อนกลับไปหน้าหลัก </a>
-</div>
+  <!-- Navigation -->
+  <nav>
+    <a href="../index.html">หน้าหลัก</a>
+    <a href="../เกี่ยวกับเรา.html">เกี่ยวกับเรา</a>
+    <a href="../news.html">ข่าวสาร</a>
+    <a href="../activities.html">กิจกรรม</a>
+    <a href="../ติดต่อ.html">ติดต่อ</a>
+    <a href="แนะนำสถานที่ฝึกงาน.html" style="background-color:#ffd600; color:#001c44;">แนะนำสถานที่ฝึกงาน</a>
+    <a href="../public-relations.html">ข่าวประชาสัมพันธ์</a>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <h2>เลือกสาขาฝึกงานของคุณ</h2>
+    <div class="button-container">
+      <a class="btn" href="account.html">บัญชี</a>
+      <a class="btn" href="marketing.html">การตลาด</a>
+      <a class="btn" href="it.html">คอมพิวเตอร์ธุรกิจ</a>
+    </div>
+
+    <a class="back-link" href="../หน้าแรก.html">⬅ ย้อนกลับไปหน้าหลัก</a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ | พัฒนาโดยแผนกคอมพิวเตอร์ธุรกิจ
+  </footer>
 
 </body>
 </html>
