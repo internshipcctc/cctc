@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>สถานที่ฝึกงาน - การตลาด</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&family=Mali&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../photo/โลโก้.png" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Sarabun', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .animated-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 50px 40px;
+      color: white;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    .animated-header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url("../photo/1เบลอ.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(20px);
+      opacity: 0.85;
+      z-index: -1;
+    }
+
+    .animated-header img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .header-text p {
+      margin-top: 5px;
+      font-size: 1em;
+      font-family: 'Mali', sans-serif;
+    }
+
+    nav {
+      background: linear-gradient(90deg, #004aad, #001c44);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 22px;
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 6px 8px;
+      border-radius: 6px;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffd600;
+      color: #001c44;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffd600;
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #004aad;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 20px 0;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    .card-content p {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .back-link a:hover {
+      background-color: #388e3c;
+    }
+
+    footer {
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .animated-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      main {
+        margin: 0 15px;
+        padding: 30px 20px;
+      }
+
+      .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="animated-header">
+    <img src="../photo/โลโก้.png" alt="โลโก้โรงเรียน" />
+    <div class="header-text">
+      <h1>วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ</h1>
+      <p>CHAROENMIT COMMERCIAL TECHNOLOGICAL COLLEGE</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="../index.html">หน้าหลัก</a>
+    <a href="../เกี่ยวกับเรา.html">เกี่ยวกับเรา</a>
+    <a href="../ข่าวสาร.html">ข่าวสาร</a>
+    <a href="../กิจกรรม.html">กิจกรรม</a>
+    <a href="../ติดต่อ.html">ติดต่อ</a>
+	<a href="../เอกสาร.html">เอกสาร</a>
+    <a href="แนะนำสถานที่ฝึกงาน.html" style="background-color:#ffd600; color:#001c44;">แนะนำสถานที่ฝึกงาน</a>
+    <a href="../ข่าวประชาสัมพันธ์.html">ข่าวประชาสัมพันธ์</a>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <h2>สถานที่ฝึกงานสำหรับสาขาการตลาด</h2>
+
+    <div class="card">
+      <img src="รูป/เฉล.jpg" alt="เฉลิมกิจ การไฟฟ้า" />
+      <div class="card-content">
+        <h3>เฉลิมกิจ การไฟฟ้า</h3>
+        <p><strong>ที่ตั้ง:</strong> หมู่ 3 477 ต.จันดี อ.ฉวาง จ.นครศรีธรรมราช 80250</p>
+        <p><strong>เบอร์โทร:</strong> 075 364 027</p>
+        <p><strong>รายละเอียด:</strong> งานบริการลูกค้า และงานซ่อมแซมเครื่องใช้ไฟฟ้า</p>
+		<p><strong>แผนที่ :</strong><a href = "https://maps.app.goo.gl/p18Sp1qDvpoyUtWDA">คลิกเพื่อดูแผนที่</a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="รูป/เทศบาลเมืองเวียงสระ.jpg" alt="เทศบาลเมืองเวียงสะ" />
+      <div class="card-content">
+        <h3>เทศบาลเมืองเวียงสระ</h3>
+        <p><strong>ที่ตั้ง:</strong>451 ม.4 ต.บ้านส้อง อ.เวียงสระ จ.สุราษฎร์ธานี 84190</p>
+		  <p><strong>เบอร์โทร :</strong> 077-362056 </p>
+        <p><strong>รายละเอียด :</strong>จัดทำเอกสาร ใช้เครื่องใช้สำนักงาน งานบริการประชาชน ฯลฯ</p>
+		<p><strong>แผนที่ :</strong><a href = "https://maps.app.goo.gl/1W1gvr34S3YEYtAi8">คลิกเพื่อดูแผนที่</a></p>
+      </div>
+    </div>
+	  
+	  <div class="card">
+      <img src="รูป/ร้านโฟร์โฟน.jpg" alt="ร้านโฟร์โฟน(กวางโมบาย)" />
+      <div class="card-content">
+        <h3>ร้านโฟร์โฟน(กวางโมบาย)</h3>
+        <p><strong>ที่ตั้ง:&nbsp;</strong> ทานพอ</p>
+		  <p><strong>เบอร์โทร : </strong> </p>
+        <p><strong>รายละเอียด:</strong> งานบริการลูกค้าเกี่ยวกับการใช้งานโทรศัพท์เบื้องต้น</p>
+		<p><strong>แผนที่ :</strong><a href = "https://maps.app.goo.gl/qwNCDehRgq5S8uwm9">คลิกเพื่อดูแผนที่</a></p>
+      </div>
+    </div>
+	  
+	  <div class="card">
+      <img src="รูป/สุวรรณพงศ์.jpg" alt="บริษัท สุวรรณพงค์วัสดุภัณฑ์ จำกัด" />
+      <div class="card-content">
+        <h3>บริษัท สุวรรณพงค์วัสดุภัณฑ์ จำกัด</h3>
+        <p><strong>ที่ตั้ง:</strong> 203/1 หมู่ที่ 2 ตำบลนาแว อำเภอฉวาง จ.นครศรีธรรมราช </p>
+		<p><strong>เบอร์โทร : </strong> 092-890-9989</p>
+        <p><strong>รายละเอียด:</strong> บริการลุกค้าเกี่ยวกับวัสดุภัณฑ์และงานส่งสินค้า ฯลฯ</p>
+		<p><strong>แผนที่ :</strong><a href = "https://maps.app.goo.gl/XkxcYSj9bnjZeBn57">คลิกเพื่อดูแผนที่</a></p>
+      </div>
+    </div>
+	  
+	   <div class="card">
+      <img src="รูป/โตโยต้าจันดี.webp" alt="โตโยต้านครศรีธรรมราช สาขาจันดี" />
+      <div class="card-content">
+        <h3>โตโยต้านครศรีธรรมราช สาขาจันดี</h3>
+        <p><strong>ที่ตั้ง:</strong>  222 ม.10 ต.หลักช้าง อ.ช้างกลาง จ.นครศรีธรรมราช </p>
+		<p><strong>เบอร์โทร : </strong> 075-445 777</p>
+        <p><strong>รายละเอียด:</strong> บริการลูกค้า ทำกิจกรรมไลฟ์สด เช็คสต๊อกอะไหล่รถ ออกบูธ ฯลฯ</p>
+		<p><strong>แผนที่ :</strong><a href = "https://maps.app.goo.gl/PzY32a6h4MKBjVJH7">คลิกเพื่อดูแผนที่</a></p>
+      </div>
+    </div>
+	  
+	  <div class="card">
+      <img src="รูป/โกแฟคทอรี่.jpg" alt="บริษัท โก แฟคทอรี่ จำกัด" />
+      <div class="card-content">
+        <h3>บริษัท โก แฟคทอรี่ จำกัด</h3>
+        <p><strong>ที่ตั้ง:</strong> 88 หมู่ที่ 3 ตำบลจันดี อำเภอฉวาง จ.นครศรีธรรมราช 80250 </p>
+		<p><strong>เบอร์โทร : </strong> 061-9253546</p>
+        <p><strong>รายละเอียด:</strong> การให้บริการลูกค้า งานบริการส่งสินค้า ฯลฯ</p>
+		<p><strong>แผนที่ :</strong><a href = "https://maps.app.goo.gl/bpJSUU9NFTrTcxSk7">คลิกเพื่อดูแผนที่</a></p>
+		
+      </div>
+    </div>
+	  
+	  <div class="card">
+      <img src="รูป/โลตัสจันดี.jpg" alt="เทสโก้โลตัส สาขาจันดี" />
+      <div class="card-content">
+        <h3>เทศโก้โลตัส สาขาจันดี</h3>
+        <p><strong>ที่ตั้ง:</strong> 468 ต.จันดี อ.ฉวาง นครศรีธรรมราช 80250</p>
+		<p><strong>เบอร์โทร : </strong> 075 364 585</p>
+        <p><strong>รายละเอียด:</strong> การคัดแยกสินค้า การขายสินค้า เช็คสต๊อก ฯลฯ</p>
+		<p><strong>แผนที่ :</strong><a href = "https://maps.app.goo.gl/idcLwQU4oVZyJaqr8">คลิกเพื่อดูแผนที่</a></p>
+      </div>
+    </div>
+
+    <div class="back-link">
+      <a href="แนะนำสถานที่ฝึกงาน.html">⬅ ย้อนกลับไปหน้าเลือกสาขา</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ | พัฒนาโดยแผนกคอมพิวเตอร์ธุรกิจ
+  </footer>
+
+</body>
+</html>
