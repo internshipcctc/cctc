@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ติดต่อเรา - วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&family=Mali&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="photo/โลโก้.png" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Sarabun', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .animated-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 60px 40px;
+      color: white;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    .animated-header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url("photo/1เบลอ.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(20px);
+      opacity: 0.85;
+      z-index: -1;
+    }
+
+    .animated-header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .header-text p {
+      margin-top: 5px;
+      font-size: 1em;
+      font-family: 'Mali', sans-serif;
+    }
+
+    nav {
+      background: linear-gradient(90deg, #004aad, #001c44);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      margin: 0 20px 20px;
+      padding: 0;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 25px;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      border-radius: 6px;
+      margin: 6px 10px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffd600;
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+
+    nav a:hover {
+      background-color: #ffd600;
+      color: #001c44;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      color: #004aad;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h3 {
+      color: #003366;
+      font-family: 'Mali', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      border-bottom: 3px solid #ffd600;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .contact-info p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .animated-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .animated-header img {
+        margin-bottom: 10px;
+      }
+
+      nav {
+        margin: 0 10px 15px;
+      }
+
+      nav a {
+        margin: 6px 6px;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+      }
+
+      main {
+        padding: 30px 20px;
+        margin: 0 10px 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="animated-header">
+    <img src="photo/โลโก้.png" alt="โลโก้โรงเรียน" />
+    <div class="header-text">
+      <h1>วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ</h1>
+      <p>CHAROENMIT COMMERCIAL TECHNOLOGICAL COLLEGE</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="เกี่ยวกับเรา.html">เกี่ยวกับเรา</a>
+    <a href="ข่าวสาร.html">ข่าวสาร</a>
+    <a href="กิจกรรม.html">กิจกรรม</a>
+    <a href="ติดต่อ.html" style="background-color:#ffd600; color:#001c44;">ติดต่อ</a>
+	<a href="เอกสาร.html">เอกสาร</a>
+    <a href="แนะนำสถานที่ฝึกงาน/แนะนำสถานที่ฝึกงาน.html">แนะนำสถานที่ฝึกงาน</a>
+    <a href="ข่าวประชาสัมพันธ์.html">ข่าวประชาสัมพันธ์</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h2>ติดต่อเรา</h2>
+
+    <section class="contact-info">
+      <h3>ข้อมูลติดต่อ</h3>
+      <p><strong>ที่อยู่:&nbsp; 131/1&nbsp; &nbsp;ม.8&nbsp; &nbsp;ต.ไม้เรียง&nbsp; &nbsp;อ.ฉวาง&nbsp; &nbsp;จ.นครศรีธรรมราช 80260</strong> </p>
+      <p><strong>โทรศัพท์: 075-480-857</strong> </p>
+      <p><strong>อีเมล: ccs481286@gmail.com</strong> </p>
+      <p><strong>เวลาทำการ:</strong> วันจันทร์ - ศุกร์ เวลา 08:00 - 16:00 น.</p>
+    </section>
+
+    <section class="map-container">
+      <h3>แผนที่</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.3456250601066!2d99.49069737449392!3d8.465731297552669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3053c97a42255ff3%3A0xd174d8976db6da3e!2z4Lin4Li04LiX4Lii4Liy4Lil4Lix4Lii4LmA4LiX4LiE4LmC4LiZ4LmC4Lil4Lii4Li14LmA4LiI4Lij4Li04LiN4Lih4Li04LiV4Lij4Lie4LiT4Li04LiK4Lii4Liy4LiB4Liy4Lij!5e0!3m2!1sth!2sth!4v1751981075107!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ | พัฒนาโดยแผนกคอมพิวเตอร์ธุรกิจ
+  </footer>
+
+</body>
+</html>

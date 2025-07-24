@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ข่าวประชาสัมพันธ์ - วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&family=Mali&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="photo/โลโก้.png" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Sarabun', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .animated-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 50px 40px;
+      color: white;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+
+    .animated-header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url("photo/1เบลอ.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(20px);
+      opacity: 0.85;
+      z-index: -1;
+    }
+
+    .animated-header img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .header-text p {
+      margin-top: 5px;
+      font-size: 1em;
+      font-family: 'Mali', sans-serif;
+    }
+
+    nav {
+      background: linear-gradient(90deg, #004aad, #001c44);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 22px;
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 6px 8px;
+      border-radius: 6px;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffd600;
+      color: #001c44;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffd600;
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #004aad;
+      margin-bottom: 30px;
+    }
+
+    .news-item {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+
+    .news-item h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    .news-item p {
+      margin: 6px 0;
+    }
+
+    footer {
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      .animated-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      main {
+        margin: 0 15px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="animated-header">
+    <img src="photo/โลโก้.png" alt="โลโก้โรงเรียน" />
+    <div class="header-text">
+      <h1>วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ</h1>
+      <p>CHAROENMIT COMMERCIAL TECHNOLOGICAL COLLEGE</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="เกี่ยวกับเรา.html">เกี่ยวกับเรา</a>
+    <a href="ข่าวสาร.html">ข่าวสาร</a>
+    <a href="กิจกรรม.html">กิจกรรม</a>
+    <a href="ติดต่อ.html">ติดต่อ</a>
+	<a href="เอกสาร.html">เอกสาร</a>
+    <a href="แนะนำสถานที่ฝึกงาน/แนะนำสถานที่ฝึกงาน.html">แนะนำสถานที่ฝึกงาน</a>
+    <a href="ข่าวประชาสัมพันธ์.html" style="background-color:#ffd600; color:#001c44;">ข่าวประชาสัมพันธ์</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h2>ข่าวประชาสัมพันธ์</h2>
+
+    <div class="news-item">
+      <h3>📌 รับสมัครนักเรียนใหม่ ประจำปีการศึกษา 2568</h3>
+      <p><strong>วันที่:</strong> 1 มีนาคม 2568</p>
+      <p>เปิดรับสมัครนักเรียนระดับ ปวช. สาขาการตลาด บัญชี เทคโนโลยีธุรกิจดิจิทัล ตั้งแต่วันที่ 1 มี.ค. ถึง 30 เม.ย. 2568</p>
+    </div>
+
+    <div class="news-item">
+      <h3>📢 ประชุมผู้ปกครองนักเรียน ภาคเรียนที่ 1</h3>
+      <p><strong>วันที่:</strong> 15 พฤษภาคม 2568</p>
+      <p>ขอเชิญผู้ปกครองนักเรียนเข้าร่วมการประชุม เวลา 09.00 น. ณ ห้องประชุมปี 3</p>
+    </div>
+
+    <div class="news-item">
+      <h3>🎓 พิธีมอบประกาศนียบัตร ปีการศึกษา 2567</h3>
+      <p><strong>วันที่:</strong> 13 มีนาคม 2568</p>
+      <p>พิธีมอบวุฒิบัตรให้แก่ผู้สำเร็จการศึกษา ณ ห้องประชุมปี3 เวลา 08.30 น.</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ | พัฒนาโดยแผนกคอมพิวเตอร์ธุรกิจ
+  </footer>
+
+</body>
+</html>

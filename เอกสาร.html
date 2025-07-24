@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ดาวน์โหลดเอกสาร | วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&family=Mali&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="photo/favicon.png" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Sarabun', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .animated-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 60px 40px;
+      color: white;
+      overflow: hidden;
+      flex-wrap: wrap;
+    }
+    .animated-header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url("photo/1เบลอ.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: blur(20px);
+      opacity: 0.85;
+      z-index: -1;
+    }
+    .animated-header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+    .header-text h1 {
+      margin: 0;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .header-text p {
+      margin-top: 5px;
+      font-size: 1em;
+      font-family: 'Mali', sans-serif;
+    }
+    nav {
+      background: linear-gradient(90deg, #004aad, #001c44);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      margin: 0 20px 20px;
+      padding: 0;
+      font-weight: 600;
+    }
+    nav a {
+      color: white;
+      padding: 14px 25px;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      border-radius: 6px;
+      margin: 6px 10px;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffd600;
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+    nav a:hover {
+      background-color: #ffd600;
+      color: #001c44;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .content {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .content h2 {
+      color: #004aad;
+      margin-bottom: 20px;
+    }
+    .doc-section {
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      text-align: left;
+    }
+    .doc-section h3 {
+      color: #003366;
+      margin-top: 30px;
+      border-left: 6px solid #ffd600;
+      padding-left: 10px;
+    }
+    .doc-list {
+      padding-left: 20px;
+    }
+    .doc-list a {
+      display: block;
+      margin: 10px 0;
+      color: #004aad;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .doc-list a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    @media (max-width: 768px) {
+      .animated-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+      }
+      .animated-header img {
+        margin-bottom: 10px;
+      }
+      nav {
+        margin: 0 10px 15px;
+      }
+      nav a {
+        margin: 6px 6px;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="animated-header">
+    <img src="photo/โลโก้.png" alt="โลโก้โรงเรียน" />
+    <div class="header-text">
+      <h1>วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ</h1>
+      <p>CHAROENMIT COMMERCIAL TECHNOLOGICAL COLLEGE</p>
+    </div>
+  </header>
+  <nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="เกี่ยวกับเรา.html">เกี่ยวกับเรา</a>
+    <a href="ข่าวสาร.html">ข่าวสาร</a>
+    <a href="กิจกรรม.html">กิจกรรม</a>
+    <a href="ติดต่อ.html">ติดต่อ</a>
+    <a href="เอกสาร.html">เอกสาร</a>
+	<a href="แนะนำสถานที่ฝึกงาน/แนะนำสถานที่ฝึกงาน.html">แนะนำสถานที่ฝึกงาน</a>
+    <a href="ข่าวประชาสัมพันธ์.html">ข่าวประชาสัมพันธ์</a>
+  </nav>
+  <div class="content">
+	  <h2><i>ดาวน์โหลดเอกสาร</i></h2>
+    <div class="doc-section">
+      <h3>📘 เอกสารงานครูที่ปรึกษา</h3>
+      <div class="doc-list">
+        <a href="#">🔻 แบบฟอร์มบันทึกนักเรียน</a>
+        <a href="#">🔻 แผนการดำเนินงาน</a>
+      </div>
+      <h3>📗 เอกสารแนะแนว</h3>
+      <div class="doc-list">
+        <a href="#">🔻 แบบประเมินความพร้อม</a>
+        <a href="#">🔻 รายงานการแนะแนว</a>
+      </div>
+      <h3>📕 เอกสารงานทะเบียน</h3>
+      <div class="doc-list">
+        <a href="#">🔻 ใบลานักเรียน</a>
+        <a href="#">🔻 คำร้องทั่วไป</a>
+		<a href="#">🔻 ใบคำร้องขอพักการเรียน</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    © 2025 วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ | พัฒนาโดยแผนกคอมพิวเตอร์ธุรกิจ
+  </footer>
+</body>
+</html>

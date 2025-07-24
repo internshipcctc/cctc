@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>กิจกรรม - อัลบั้มภาพ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&family=Mali&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="photo/โลโก้.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Sarabun', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 50px 40px;
+      color: white;
+      background: url("photo/1เบลอ.jpg") center/cover no-repeat;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    header img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid white;
+      z-index: 1;
+    }
+
+    .header-text {
+      z-index: 1;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+
+    .header-text p {
+      font-family: 'Mali', sans-serif;
+    }
+
+    nav {
+      background: linear-gradient(90deg, #004aad, #001c44);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #ffd600;
+      color: #001c44;
+      border-radius: 5px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #004aad;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="photo/โลโก้.png" alt="โลโก้โรงเรียน" />
+    <div class="header-text">
+      <h1>วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ</h1>
+      <p>CHAROENMIT COMMERCIAL TECHNOLOGICAL COLLEGE</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="เกี่ยวกับเรา.html">เกี่ยวกับเรา</a>
+    <a href="ข่าวสาร.html">ข่าวสาร</a>
+    <a href="กิจกรรม.html" class="active">กิจกรรม</a>
+    <a href="ติดต่อ.html">ติดต่อ</a>
+	<a href="เอกสาร.html">เอกสาร</a> 
+    <a href="แนะนำสถานที่ฝึกงาน/แนะนำสถานที่ฝึกงาน.html">แนะนำสถานที่ฝึกงาน</a>
+    <a href="ข่าวประชาสัมพันธ์.html">ข่าวประชาสัมพันธ์</a>
+  </nav>
+
+  <!-- Main content -->
+ 
+	<main>
+    <h2>กิจกรรมแห่เทียนพรรษา</h2>
+    <div class="gallery">
+	  <img src="แห่เทียนพรรษา/20250709_090516.jpg" alt="กิจกรรม">
+      <img src="แห่เทียนพรรษา/20250709_090427.jpg" alt="กิจกรรม 1">
+      <img src="แห่เทียนพรรษา/20250709_090555.jpg" alt="กิจกรรม 2">
+      <img src="แห่เทียนพรรษา/20250709_090608.jpg" alt="กิจกรรม 3">
+      <img src="แห่เทียนพรรษา/20250709_090631.jpg" alt="กิจกรรม 4">
+      <img src="แห่เทียนพรรษา/20250709_092305.jpg" alt="กิจกรรม 5">
+	  <img src="แห่เทียนพรรษา/20250709_092330.jpg" alt="กิจกรรม 6">
+	  <img src="แห่เทียนพรรษา/20250709_095147.jpg" alt="กิจกรรม 7">
+	  <img src="แห่เทียนพรรษา/20250709_095325.jpg" alt="กิจกรรม 8">
+	  <img src="แห่เทียนพรรษา/20250709_090544.jpg" alt="กิจกรรม 9">
+	  <img src="แห่เทียนพรรษา/20250709_090551.jpg" alt="กิจกรรม 10">
+	  <img src="แห่เทียนพรรษา/20250709_090608.jpg" alt="กิจกรรม 11">
+    </div>
+		<br>
+		<div style="text-align: center;">
+       <a href="https://drive.google.com/drive/folders/1-_lrqgFSDr4LNcFF-9nd0xaMkCcHjhlQ?usp=drive_link" style="font-size: 20px; color: darkblue; text-decoration: none;"> <u> รูปภาพเพิ่มเติม </u> </a>
+       </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 วิทยาลัยเทคโนโลยีเจริญมิตรพณิชยการ | พัฒนาโดยแผนกคอมพิวเตอร์ธุรกิจ
+  </footer>
+
+</body>
+</html>
